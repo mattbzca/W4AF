@@ -2,6 +2,14 @@
 // Examples:
 // console.log(min(0, 10)); // will output 0.
 // console.log(min(0, -10)); // will output -10
+function min(...numbers) {
+    let result = Infinity;
+    for (let number of numbers) {
+        if (number < result) result = number;
+    }
+    return result;
+}
+console.log(min(3, 5)); // 3
 
 // 2. Write a function that takes the radius of a circle and outputs it’s approximate circumference (the formula for circumference is 2 *pi * radius, you may use 3.14 for pi).
 // Example Output:
